@@ -1,9 +1,13 @@
 package main
 
 func main() {
-	cards := deck{"Ace of Spades", newCard()}
-
+	cards := newDeck()
 	cards.print()
+
+	hand, remainingCards := deal(cards, 5)
+
+	hand.print()
+	remainingCards.print()
 }
 
 func newCard() string {
